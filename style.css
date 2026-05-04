@@ -52,6 +52,13 @@ html, body {
 }
 
 /* ========================
+   UPDATED AUTHOR TEXT
+   ======================== */
+.by::after {
+  content: " created by wertikk";
+}
+
+/* ========================
    Map Buttons
    ======================== */
 .menu {
@@ -198,7 +205,6 @@ canvas {
   display: block;
   max-width: 100%;
   max-height: 100%;
-  /* aspect-ratio: 1; handled by JS */
   border: 2px solid #1e2124;
   box-shadow: 0 0 24px rgba(0,0,0,0.7);
   cursor: crosshair;
