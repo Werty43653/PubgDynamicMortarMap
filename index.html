@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PUBG Mortar Calculator</title>
+  <link rel="icon" href="pubg-logo-1.png">
+  <link href="https://fonts.googleapis.com/css2?family=Rubik+Mono+One&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,500,1,0"/>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="nav">
+    <h1 class="navtitle">
+      <img class="navlogo" src="pubg-logo-1.png" alt="PUBG"><br>
+      MORTAR<br>
+      CALCULATOR<br>
+      <span class="by">made by horsse</span>
+    </h1>
+
+    <div class="menu">
+      <p class="how">Кликни две точки на карте, чтобы узнать расстояние. Используй его для наводки миномёта.</p>
+      <a class="map" href="#" data-map="rondo"><div class="mapbox" id="btn-rondo">Rondo</div></a>
+      <a class="map" href="#" data-map="sanhok"><div class="mapbox" id="btn-sanhok">Sanhok</div></a>
+      <a class="map" href="#" data-map="taego"><div class="mapbox" id="btn-taego">Taego</div></a>
+      <a class="map" href="#" data-map="erangel"><div class="mapbox active" id="btn-erangel">Erangel</div></a>
+      <a class="map" href="#" data-map="miramar"><div class="mapbox" id="btn-miramar">Miramar</div></a>
+      <a class="map" href="#" data-map="vikendi"><div class="mapbox" id="btn-vikendi">Vikendi</div></a>
+      <a class="map" href="#" data-map="karakin"><div class="mapbox" id="btn-karakin">Karakin</div></a>
+      <a class="map" href="#" data-map="deston"><div class="mapbox" id="btn-deston">Deston</div></a>
+      <a class="map" href="#" data-map="paramo"><div class="mapbox" id="btn-paramo">Paramo</div></a>
+    </div>
+
+    <div class="togglerow">
+      <label class="toggle-label">
+        <input type="checkbox" id="gridToggle" checked>
+        <span class="toggle-track"></span>
+        <span class="toggle-text">Grid overlay</span>
+      </label>
+    </div>
+
+    <div class="footer">
+      <h1 class="award">HELPFUL? LEAVE A STEAM AWARD! <span class="material-symbols-outlined heart">favorite</span></h1>
+    </div>
+  </div>
+
+  <div class="maparea">
+    <div class="canvaswrap">
+      <canvas id="myCanvas" width="900" height="900"></canvas>
+    </div>
+
+    <div class="infobar">
+      <div class="distblock">
+        <span class="distlabel">DISTANCE</span>
+        <span class="distvalue" id="display">0m</span>
+      </div>
+      <div class="distblock">
+        <span class="distlabel">MAP</span>
+        <span class="distvalue" id="mapname">Erangel — 8×8 km</span>
+      </div>
+      <button class="button" id="clearBtn">CLEAR</button>
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
